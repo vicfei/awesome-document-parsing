@@ -16,6 +16,33 @@
 - [Tool dossiers](tools/) — one page per tool: deployment forms, tiers, gotchas
 - [Contribute your measurements](CONTRIBUTING.md)
 
+## Community leaderboard
+
+Open-source tools registered in this repo, ranked two ways. Refreshed by [`scripts/leaderboard.py`](scripts/leaderboard.py) (snapshots under [`snapshots/`](snapshots/)).
+
+**By total stars** (as of 2026-11-02)
+
+| # | Repo | Stars | Weekly gain* |
+|---|---|---|---|
+| 1 | [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) | 92,082 | — |
+| 2 | [MinerU](https://github.com/opendatalab/MinerU) | 82,947 | — |
+| 3 | [docling](https://github.com/docling-project/docling) | 69,970 | — |
+| 4 | [Marker](https://github.com/datalab-to/marker) | 40,742 | — |
+| 5 | [OpenDataLoader](https://github.com/opendataloader-project/opendataloader-pdf) | 30,139 | — |
+| 6 | [unstructured](https://github.com/Unstructured-IO/unstructured) | 15,659 | — |
+| 7 | [doctr](https://github.com/mindee/doctr) | 6,405 | — |
+| 8 | [docstrange](https://github.com/NanoNets/docstrange) | 1,585 | — |
+| 9 | [indra](https://github.com/datalab-to/indra) | 1,578 | — |
+| 10 | [OpenOCR](https://github.com/Topdu/OpenOCR) | 1,491 | — |
+
+**By weekly gain\*** — *appears from the second refresh (see note)*
+
+| # | Repo | Weekly gain* | Stars |
+|---|---|---|---|
+| — | _run `scripts/leaderboard.py` after ≥7 days to populate_ | — | — |
+
+\* **Why weekly gains need two refreshes**: GitHub has closed stargazer-timeline access to third-party tokens (REST `/stargazers` → 404, GraphQL `stargazers` edges → empty, `star+json` preview → removed), so "stars this week" cannot be queried directly. The script therefore snapshots totals and reports the **snapshot-diff normalized to 7 days** — run it weekly (or add it to a cron) and the second table fills in with real gains. First snapshot: 2026-11-02.
+
 ## Tool matrix
 
 ### Open-source parsing pipelines

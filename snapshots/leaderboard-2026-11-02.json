@@ -1,0 +1,66 @@
+{
+ "date": "2026-11-02",
+ "label": "gain since 2026-11-02 (1d), normalized to 7d",
+ "rows": [
+  {
+   "repo": "PaddlePaddle/PaddleOCR",
+   "stars": 92082,
+   "gain": 0,
+   "per_week": 0
+  },
+  {
+   "repo": "docling-project/docling",
+   "stars": 69970,
+   "gain": 0,
+   "per_week": 0
+  },
+  {
+   "repo": "opendatalab/MinerU",
+   "stars": 82947,
+   "gain": 0,
+   "per_week": 0
+  },
+  {
+   "repo": "opendataloader-project/opendataloader-pdf",
+   "stars": 30139,
+   "gain": 1,
+   "per_week": 7
+  },
+  {
+   "repo": "datalab-to/marker",
+   "stars": 40742,
+   "gain": 1,
+   "per_week": 7
+  },
+  {
+   "repo": "Unstructured-IO/unstructured",
+   "stars": 15659,
+   "gain": 0,
+   "per_week": 0
+  },
+  {
+   "repo": "mindee/doctr",
+   "stars": 6405,
+   "gain": 0,
+   "per_week": 0
+  },
+  {
+   "repo": "NanoNets/docstrange",
+   "stars": 1585,
+   "gain": 0,
+   "per_week": 0
+  },
+  {
+   "repo": "datalab-to/indra",
+   "stars": 1578,
+   "gain": 0,
+   "per_week": 0
+  },
+  {
+   "repo": "Topdu/OpenOCR",
+   "stars": 1491,
+   "gain": 0,
+   "per_week": 0
+  }
+ ]
+}
