@@ -34,7 +34,7 @@ See [perf record](../benchmarks/perf/2026-11-01_mineru41-hardware.md) and [acade
 | OCR / scans | large (3.4-line OCR engine change, upstream +11% claim) |
 | API contract | breaking across majors: 2.x single `/file_parse` endpoint vs 4.x async task API (`files[].bytes` required when no URL) — integration rework, not a drop-in upgrade |
 
-VLM-tier activation checklist (silent gaps are common): (1) engine package actually in the image (`backend=engine` errors "not installed" = image missing pkg); (2) client mode has a `server_url` channel; (3) weights in the same container/pod — a co-located inference container that nothing wires to is the classic silent failure.
+VLM-tier activation checklist (silent gaps are common): (1) engine package actually in the image (`backend=engine` errors "not installed" = image missing pkg); (2) client mode has a `server_url` channel; (3) weights in the same container/pod — a co-located inference container that nothing wires to is the classic silent failure; (4) **resource-side cross-check** to prove whether a "running" inference container actually serves: compare GPU-Util vs resident VRAM, and the **detokenizer process's cumulative CPU time** — a scheduler at 100% CPU (busy-wait) with a detokenizer that has consumed ~2 minutes over 8 months is a service that has never answered a single request, while holding a full GPU's memory ([measured case](../benchmarks/perf/2026-11-01_mineru41-hardware.md): one H20 96GB held for months at zero traffic; the wiring gap in (2) was the cause).
 
 ## Gotchas
 
